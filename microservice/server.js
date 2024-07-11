@@ -8,7 +8,7 @@ app.use(cors())
 
 
 app.get('/categories/:categoryname/products',async (req,res)=>{
-    const result=await testServer.testServer('AMZ',req.params.categoryname,10,10000,50000)
+    const result=await testServer.testServer('AMZ',req.params.categoryname,req.query.num,req,query.min,req.query.max)
     console.log(result)
     res.send("got")
 })
